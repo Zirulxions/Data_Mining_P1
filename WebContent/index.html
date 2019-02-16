@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="misc/ico_dgB_icon.ico">
+  <meta charset="utf-8">
+  <title>Welcome!</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Materialize/css/materialize.min.css">
+</head>
+<body style="background:url(misc/back1.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+  <div class="container">
+    <div class="col s12 m7">
+        <h2 class="header white-text">Please. Insert Your Text</h2>
+        <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="dataSend" type="text" class="validate" onkeyup="forcedLowerCase();">
+                  <label for="dataSend" class="active">Over Here Buddy! I am editable</label>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <input disabled value="Here you will see the value" id="disabled" type="text" class="validate">
+                    <label for="disabled">Result, Not Editable</label>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                  <button class="btn waves-effect waves-light col s7 push-s5" type="submit" name="action" id="Start">Start
+                <i class="material-icons right">send</i></button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="Materialize/js/jquery-3.3.1.min.js"></script>
+  <script src="Materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script1.js"></script>
+</body>
+</html>
