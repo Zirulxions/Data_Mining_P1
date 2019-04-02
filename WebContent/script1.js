@@ -29,7 +29,7 @@ function upData(){
         	$("wordsFound").appendChild(item2);
         }
       } else {
-    	  alert("Oops..! Something is wrong. Reload the page.");
+    	  alert("Oops..! Something is wrong. Reload the page. Also you can try another word");
       }
     })
     .catch((e) => {
@@ -59,7 +59,7 @@ function getMostWanted(){
 				$("mostWantedResult").appendChild(item1);
 			}
 		} else {
-			alert("Reload the page. Something is wrong in the back.");
+			alert("Reload the page. Something is wrong in the back. Also try telling this to an administrator.");
 		}
 	})
 }

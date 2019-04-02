@@ -103,6 +103,10 @@ public class Filter extends HttpServlet {
 				counter = res.getInt("count");
 			}
 			stat = null;
+			stat = connection.prepareStatement(prop.getValue("query_UpdateWanted"));
+			stat.setString(1, valueSend);
+			stat.executeUpdate();
+			stat = null;
 			wordsFound = new String[counter];
 			foundTimes = new Integer[counter];
 			stat = connection.prepareStatement(prop.getValue("query_Select"));
@@ -114,10 +118,6 @@ public class Filter extends HttpServlet {
 				foundTimes[i] = res.getInt("search_times");
 				i++;
 			}
-			stat = null;
-			stat = connection.prepareStatement(prop.getValue("query_UpdateWanted"));
-			stat.setString(1, valueSend);
-			stat.executeUpdate();
 			jsonArr.put(wordsFound).put(foundTimes);
 			jsonRet.put("status",200).put("message","Word Found Times: " + counter).put("arraysFound", jsonArr);
 			out.print(jsonRet.toString());
