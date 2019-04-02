@@ -22,12 +22,12 @@ function upData(){
       var item2;
       if(data.status == 200 && data.status != undefined){
         $("disabled").value = data.message;
-        //item append.
         for (var i = 0; i < data.arraysFound[0].length; i++){
         	item2 = document.createElement("h6");
         	item2.innerHTML = "Found: " + data.arraysFound[0][i] + " It was found: " + data.arraysFound[1][i] + " before.";
         	$("wordsFound").appendChild(item2);
         }
+        alert("The words down are the result(s). If you want an update about most wanted, reload the page.")
       } else {
     	  alert("Oops..! Something is wrong. Reload the page. Also you can try another word");
       }
