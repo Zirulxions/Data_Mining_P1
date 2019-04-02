@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="Materialize/css/materialize.min.css">
 </head>
-<body style="background:url(misc/back1.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+<body onload="getMostWanted();" style="background:url(misc/back1.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
   <div class="container">
     <div class="col s12 m7">
         <h2 class="header white-text">Please. Insert Your Text</h2>
@@ -34,6 +34,28 @@
             </div>
         </div>
     </div>
+    <div class="row">
+		<div class="col s12 m12">
+		    <div class="card-panel teal darken-2 white-text" id="wordsFound">
+		    	<!-- Data Found Here -->
+			</div>
+		</div>
+	</div>
+    <div class="row">
+		<div class="col s12 m12">
+		    <div class="card-panel teal darken-2 white-text" id="mostWantedResult">
+		    	<!-- Data Info Here -->
+			</div>
+		</div>
+	</div>
+    <div class="row">
+		<div class="col s12 m12">
+		    <div class="card-panel teal darken-2 white-text">
+				<span>Interrogante: ¿Que palabra existe en la base de datos?</span><br>
+		     	<span>Javier Delgado, Ricardo Torres, Raul Malagarriga, Teffany Luzardo.</span>
+			</div>
+		</div>
+	</div>
   </div>
   <script src="Materialize/js/jquery-3.3.1.min.js"></script>
   <script src="Materialize/js/materialize.min.js"></script>
