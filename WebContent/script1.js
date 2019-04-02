@@ -26,10 +26,11 @@ function upData(){
         	item2 = document.createElement("h6");
         	item2.innerHTML = "Found: " + data.arraysFound[0][i] + " It was found: " + data.arraysFound[1][i] + " before.";
         	$("wordsFound").appendChild(item2);
+        	$("wordsFound").style.display = "block";
         }
         alert("The words down are the result(s). If you want an update about most wanted, reload the page.")
       } else {
-    	  alert("Oops..! Something is wrong. Reload the page. Also you can try another word");
+    	alert("Oops..! Something is wrong. Reload the page. Also you can try another word");
       }
     })
     .catch((e) => {
