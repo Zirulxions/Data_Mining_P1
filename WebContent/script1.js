@@ -9,7 +9,6 @@ function upData(){
   var data = {
 	dataTrick: DataTrick,
   };
-  //console.log(data);
   let config = {
     method: 'POST',
     body: JSON.stringify(data),
@@ -20,8 +19,17 @@ function upData(){
     })
     .then(function(data){
       alert(data.message);
+      var item2;
       if(data.status == 200 && data.status != undefined){
         $("disabled").value = data.message;
+        //item append.
+        for (var i = 0; i < data.arraysFound[0].length; i++){
+        	item2 = document.createElement("h6");
+        	item2.innerHTML = "Found: " + data.arraysFound[0][i] + " It was found: " + data.arraysFound[1][i] + " before.";
+        	$("wordsFound").appendChild(item2);
+        }
+      } else {
+    	  alert("Oops..! Something is wrong. Reload the page.");
       }
     })
     .catch((e) => {
@@ -44,9 +52,8 @@ function getMostWanted(){
 	})
 	.then(function(data){
 		if(data.status == 200){
-			var item1, item2, item3, item4, item5;
+			var item1;
 			for (var i = 0; i < data.array[0].length; i++){
-				console.log("sentence: " + data.array[0][i] + " found: " + data.array[1][i] + " Times.");
 				item1 = document.createElement("h6");
 				item1.innerHTML = "Sentence: " + data.array[0][i] + ". Has ID: " + data.array[2][i] + ". And Was Found: " + data.array[1][i] + " time(s).";
 				$("mostWantedResult").appendChild(item1);

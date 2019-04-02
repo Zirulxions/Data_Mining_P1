@@ -96,7 +96,7 @@ public class Filter extends HttpServlet {
 		String valueSend = reqBody.getString("dataTrick");
 		ResultSet res = null;
 		try {
-			stat = connection.prepareStatement(prop.getValue("query_SelectCounter"));
+			stat = connection.prepareStatement(prop.getValue("query_SelectCount"));
 			stat.setString(1, valueSend);
 			res = stat.executeQuery();
 			if(res.next()) {
@@ -126,7 +126,7 @@ public class Filter extends HttpServlet {
 			connection.close();
 		} catch (SQLException e) {
 			System.out.println("Error: " + e.getMessage());
-			jsonRet.put("status", 200).put("message", "Somethig is not good. Reload the page or try another word.");
+			jsonRet.put("status", 500).put("message", "Somethig is not good. Reload the page or try another word.");
 			out.print(jsonRet);
 		} 		
 	}
