@@ -64,4 +64,8 @@ function getMostWanted(){
 	})
 }
 
+function reloadPage(){
+	location.reload();
+}
+
 $("Start").addEventListener("click", upData);
