@@ -2,9 +2,11 @@ function $(id){
   return document.getElementById(id);
 }
 
+var NormalData = null;
 var DataTrick = null;
 
 function upData(){
+	NormalData = $('dataSend').value;
   DataTrick = "%" + $('dataSend').value + "%";
   var data = {
 	dataTrick: DataTrick,
