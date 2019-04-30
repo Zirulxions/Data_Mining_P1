@@ -26,7 +26,7 @@ function upData(){
     			$("disabled").value = data.message;
     			for (var i = 0; i < data.arraysFound[0].length; i++){
     				console.log(data.arraysFound[0][i].includes(NormalData));
-    				if((data.arraysFound[0][i].includes(" " + NormalData + " ")) || (data.arraysFound[0][i].includes(" " + NormalData)) || (data.arraysFound[0][i].startsWith(NormalData)) || (data.arraysFound[0][i].endsWith(NormalData))) {
+    				if((data.arraysFound[0][i].includes(" " + NormalData + " "))/* || (data.arraysFound[0][i].includes(" " + NormalData)) || (data.arraysFound[0][i].includes(NormalData + " ")) */|| (data.arraysFound[0][i].startsWith(NormalData + " ")) || (data.arraysFound[0][i].endsWith(" " + NormalData))) {
 			        	item2 = document.createElement("h6");
 			        	item2.innerHTML = "Found: " + data.arraysFound[0][i] + " It was found: " + data.arraysFound[1][i] + " before.";
 			        	$("wordsFound").appendChild(item2);
